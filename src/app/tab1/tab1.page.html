@@ -1,17 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Ionic Calendar Examples
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <div class="ion-padding">
+   <calendar
+   [eventSource]="eventSource"
+   
+   [currentDate]="calendar.currentDate"
+   (onTimeSelected)="onTimeSelected($event)"
+   ></calendar>
+   parent says 
+  </div>
+  <ion-button (click)=" fetch()">fetch</ion-button>
+  <ion-button (click)="go()">Go</ion-button> 
+  <ion-button [routerLink]="['/Tab2Page']" routerLinkActive="router-link-active"  (click)="add()">add an item</ion-button>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>

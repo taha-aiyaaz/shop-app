@@ -1,5 +1,7 @@
 {
   "name": "fardeen_shop",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
